@@ -78,3 +78,29 @@ function scmAbcSegCumValue(values, break1, break2) {
 function scmAbcSegItemValue(values, break1, break2, inclusive) {
   return scm.abcSegItemValue(values, break1, break2, inclusive)
 }
+
+// rank
+// rank
+function scmRank(values) {
+  return scm.rank(values)
+}
+
+function scmRankProduct(values1, values2) {
+  return scm.rankByProduct(values1, values2)
+}
+
+function scmRankRatio(values1, values2) {
+  return scm.rankByRatio(values1, values2)
+}
+
+function scmRankDiff(values1, values2) {
+  return scm.rankByDiff(values1, values2)
+}
+
+function scmPercentProfitByPercentRank(values, percent, top) {
+  return scm.percentProfitByPercentRank(values, percent, top)
+}
+
+function scmPercentGteThan(values, value) {
+  return scm.percentThan(values, ">=", value)
+}
