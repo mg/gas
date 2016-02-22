@@ -67,6 +67,14 @@ function scmMaModels(values) {
 }
 
 // abc segmentation
-function scmAbcSeg(values, break1, break2) {
-  return scm.abcSeg(values, break1, break2)
+function scmAbcSegCumPercent(values, break1, break2) {
+  return scm.abcSegCumPercent(values, break1, break2)
+}
+
+function scmAbcSegCumValue(values, break1, break2) {
+  return scm.abcSegCumValue(values, break1, break2)
+}
+
+function scmAbcSegItemValue(values, break1, break2, inclusive) {
+  return scm.abcSegItemValue(values, break1, break2, inclusive)
 }
