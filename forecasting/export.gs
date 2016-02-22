@@ -65,3 +65,8 @@ function scmCumulativeModels(values) {
 function scmMaModels(values) {
   return scm.maModels(values)
 }
+
+// abc segmentation
+function scmAbcSeg(values, break1, break2) {
+  return scm.abcSeg(values, break1, break2)
+}
