@@ -12,3 +12,12 @@ function mean(values) {
   }
   return values
 }
+
+function fnFromPred(p) {
+  if(p === '>=') {
+    return function(a,b) { return a >= b }
+  } else if(p === '>') {
+    return function(a,b) { return a > b }
+  }
+  return function(a,b) { return a == b } 
+}
