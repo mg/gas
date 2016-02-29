@@ -32,6 +32,10 @@ function scmFcMSE(actuals, forecasts) {
   return scm.fcMSE(actuals, forecasts)
 }
 
+function scmFcMSESmooth(values, forecasts, omega, error) {
+  return scm.fcMSESmooth(values, forecasts, omega, error)
+}
+
 function scmFcRMSE(actuals, forecasts) {
   return scm.fcRMSE(actuals, forecasts)
 }
@@ -66,6 +70,32 @@ function scmMaModels(values) {
   return scm.maModels(values)
 }
 
+function scmLevExpSmoothModels(values, alpha) {
+  return scm.levExpSmoothModels(values, alpha)
+}
+
+// level trend models
+function scmLevTrendExpSmoothModel(values, alpha, beta, a, b, t) {
+  return scm.levTrendExpSmoothModel(values, alpha, beta, a, b, t)
+}
+
+function scmLevTrendExpSmoothDampModel(values, alpha, beta, phi, a, b, t) {
+  return scm.levTrendExpSmoothDampModel(values, alpha, beta, phi, a, b, t)
+}
+
+// level trend seasonality models
+function scmNormalizeF(values) {
+  return scm.normalizeF(values)
+}
+
+function scmDoubleExpSmoothMdodel(value, alpha, gamma, a, F, t, P) {
+  return scm.doubleExpSmoothMdodel(value, alpha, gamma, a, F, t, P)
+}
+
+function scmHoltWinterModel(value, alpha, beta, gamma, a, b, F, t, P) {
+  return scm.holtWinterModel(value, alpha, beta, gamma, a, b, F, t, P)
+}
+
 // abc segmentation
 function scmAbcSegCumPercent(values, break1, break2) {
   return scm.abcSegCumPercent(values, break1, break2)
@@ -79,7 +109,6 @@ function scmAbcSegItemValue(values, break1, break2, inclusive) {
   return scm.abcSegItemValue(values, break1, break2, inclusive)
 }
 
-// rank
 // rank
 function scmRank(values) {
   return scm.rank(values)
