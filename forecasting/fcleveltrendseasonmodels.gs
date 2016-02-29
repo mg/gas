@@ -1,7 +1,7 @@
 function normalizeF(values) {
   // assumes last value in values is the new value
-  var oldP= scm.sum(values.slice(0, values.length-1))
-  var newP= scm.sum(values.slice(1))
+  var oldP= sum(values.slice(0, values.length-1))
+  var newP= sum(values.slice(1))
   var nF= []
   for(var i= 1; i < values.length; i++) {
     nF.push(values[i] * oldP / newP)
