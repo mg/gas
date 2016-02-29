@@ -22,6 +22,17 @@ function fcMSE(actuals, forecasts) {
   return sum / actuals.length
 }
 
+function fcMSESmooth(values, forecasts, omega, error) {
+  var errors= []
+  errors.push(parseFloat(error))
+  for(var i= 1; i < values.length; i++) {
+    errors.push(
+      omega * Math.pow(parseFloat(values[i]) - parseFloat(forecasts[i]), 2) + (1 - omega) * errors[i-1]
+    )
+  }
+  return errors.slice(1)
+}
+
 function fcRMSE(actuals, forecasts) {
   var sum= 0
   for(var i=0; i < actuals.length; i++) {
