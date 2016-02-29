@@ -29,3 +29,12 @@ function maModels(values, m) {
   }
   return models             
 }  
+
+function levExpSmoothModels(values, alpha) {
+  var models= []
+  models.push(parseFloat(values[0]))
+  for(var i= 1; i < values.length; i++) {
+    models.push(parseFloat(values[i]) * alpha + (1-alpha) * models[i-1])
+  }
+  return models
+}
